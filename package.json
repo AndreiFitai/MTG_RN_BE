@@ -1,0 +1,41 @@
+{
+  "name": "mtg_rn_be",
+  "version": "1.0.0",
+  "description": "MtG Deck building App Backend",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreiFitai/MTG_RN_BE.git"
+  },
+  "author": "Andrei Fitai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreiFitai/MTG_RN_BE/issues"
+  },
+  "homepage": "https://github.com/AndreiFitai/MTG_RN_BE#readme",
+  "dependencies": {
+    "apollo-server-express": "^2.16.1",
+    "bcrypt": "^5.0.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
+    "save-dev": "0.0.1-security"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-react-hooks": "^4.0.0"
+  }
+}
