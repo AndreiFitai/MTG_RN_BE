@@ -10,7 +10,6 @@ module.exports = {
     };
   },
   CORS_CONFIG: {
-    origin: 'http://localhost:3001', //change with your RN client URL
     credentials: true,
   },
 };
