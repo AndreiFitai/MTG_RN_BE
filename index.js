@@ -1,5 +1,6 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const bodyparser = require('body-parser');
 const morgan = require('morgan');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
@@ -24,6 +25,7 @@ const { PORT, CORS_CONFIG, COOKIE_CONFIG } = require('./config');
 app.use(cors(CORS_CONFIG));
 app.use(cookieParser());
 app.use(morgan('dev'));
+app.use(bodyparser.json());
 
 app.use(
   express.urlencoded({
