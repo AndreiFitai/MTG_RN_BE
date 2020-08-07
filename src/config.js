@@ -3,8 +3,6 @@ module.exports = {
   COOKIE_CONFIG(expDate) {
     return {
       httpOnly: true,
-      //secure: true, //on HTTPS
-      //domain: 'example.com', //set your domain
       sameSite: true,
       maxAge: expDate,
     };

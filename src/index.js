@@ -61,6 +61,10 @@ app.get('/home', authenticateRoute, (req, res) => {
   res.send('You are home!');
 });
 
+app.get('/hello', (req, res) => {
+  res.send('Hello ( no auth needed) !');
+});
+
 app.post('/login', async (req, res) => {
   const { device, userAgent, email, password } = req.body;
   const theUser = users.find((user) => user.email === email);

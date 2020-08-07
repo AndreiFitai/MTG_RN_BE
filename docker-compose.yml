@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  db:
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data:delegated
+
+  backend:
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    environment:
+      - PORT=3000
+    links:
+      - db
+    env_file:
+      - .env
+
+volumes:
+  db-data:
